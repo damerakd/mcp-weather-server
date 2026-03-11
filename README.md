@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# mcp-weather-server
-mcp-weather-server
-=======
 ## MCP Weather Server
 
 This repository provides a simple **Model Context Protocol (MCP)** server written in Python that exposes weather data as tools. It is packaged so it can be published to GitHub and (optionally) to PyPI.
@@ -62,4 +58,8 @@ npx -y @modelcontextprotocol/inspector
 
 and connect to `http://localhost:8000/mcp`.
 
->>>>>>> 748634e (feat: initialize MCP weather server package)
+### Git conventions
+
+- **Commit messages** must follow **Conventional Commits** (e.g. `feat: add daily forecast tool`, `fix(server): handle API errors`).
+- A Cursor rule at `.cursor/rules/git-conventional-commits.mdc` documents the allowed types and format.
+

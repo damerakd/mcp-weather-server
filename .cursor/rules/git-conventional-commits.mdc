@@ -1,0 +1,38 @@
+---
+description: Enforce Conventional Commits for all git commits
+alwaysApply: true
+---
+
+# Git Conventional Commits
+
+When creating git commits in this repository, always follow the **Conventional Commits** format for the **first line** of the commit message:
+
+`type(scope)?: short, imperative description`
+
+## Allowed types
+
+- `feat` – new feature
+- `fix` – bug fix
+- `docs` – documentation only changes
+- `style` – formatting, missing semicolons, etc; no code change
+- `refactor` – refactoring without behavior changes
+- `test` – adding or updating tests
+- `chore` – tooling, config, CI, or other non‑production code changes
+
+Examples:
+
+- `feat: add daily forecast tool`
+- `fix(server): handle geocoding errors`
+- `docs: document MCP test client`
+- `test: add MCP weather client script`
+
+## Message rules
+
+- **First line only** is validated; keep it under ~72 characters.
+- Use **present tense, imperative mood** (e.g. “add”, “fix”, “refactor”).
+- Optional `scope` should be lowercase and use `-` or `_` only, e.g. `fix(api-client): ...`.
+
+The agent should:
+
+- Prefer these types and structure when drafting commit messages.
+- Avoid non‑conventional prefixes such as `update:`, `change:`, or bare messages without a type.
