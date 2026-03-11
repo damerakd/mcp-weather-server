@@ -150,10 +150,8 @@ def main(transport: str = "stdio") -> None:
         transport: Either "stdio" (default) or "streamable-http".
     """
 
-    async def _run() -> None:
-        mcp.run(transport=transport)
-
-    asyncio.run(_run())
+    # FastMCP manages its own event loop; do not wrap in asyncio.run()
+    mcp.run(transport=transport)
 
 
 if __name__ == "__main__":
